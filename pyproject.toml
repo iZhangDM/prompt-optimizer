@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "agent-prompt-optimizer"
+version = "1.0.0"
+description = "Analyze and optimize AI agent system prompts — zero dependencies, pure Python"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Prompt Optimizer Team", email = "hello@promptoptimizer.dev" }]
+keywords = ["prompt-engineering", "ai", "llm", "cli", "optimization"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.urls]
+Homepage = "https://promptoptimizer.dev"
+Repository = "https://github.com/promptoptimizer/apo"
+Documentation = "https://promptoptimizer.dev/docs"
+
+[project.scripts]
+apo = "apo:main"
+
+[tool.setuptools.packages.find]
+include = ["prompt_optimizer", "prompt_optimizer.*"]
+
+[tool.setuptools.package-data]
+prompt_optimizer = ["py.typed"]
